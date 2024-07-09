@@ -1,50 +1,90 @@
+/* General styling for the body */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.calculator-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.input-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
-.input-number {
-    width: 45%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+/* Center the game container */
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.sum-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+/* Styling for the game board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling for each cell in the board */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    font-size: 24px;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    user-select: none;
+}
+
+/* Styling for the restart button */
+button {
+    padding: 10px 20px;
     font-size: 16px;
-    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
 }
 
-.sum-button:hover {
-    background-color: #45a049;
+button:hover {
+    background-color: #0056b3;
 }
 
-.output {
-    margin-top: 15px;
+/* Styling for the message paragraph */
+#message {
+    margin-top: 10px;
     font-size: 18px;
+
     font-weight: bold;
+}
+
+/* Styling for player indicators */
+#player-indicators {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.player {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.player.active {
+    background-color: #007bff;
+    color: white;
 }
